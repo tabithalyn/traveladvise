@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import './App.css';
+import './index.css';
 import Options from './Options';
 
 function App() {
