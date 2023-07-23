@@ -6,6 +6,7 @@ import Attractions from './pages/Attractions';
 import FoodDrink from './pages/FoodDrink';
 import Relaxation from './pages/Relaxation';
 import Sightseeing from './pages/Sightseeing';
+import Home from './pages/Home';
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -15,7 +16,6 @@ const StyledLink = styled(Link)`
 `;
 
 function App() {
-  // https://www.timeout.com/london/attractions/top-london-attractions
   return (
     <>
       <Container fluid>
@@ -24,11 +24,12 @@ function App() {
         </Row>
         <Row className='m-3'>
         <Nav justify variant='tabs'>
-          <Nav.Link className='p-5'><StyledLink to='/attractions'>Attractions</StyledLink></Nav.Link>
-          <Nav.Link className='p-5'><StyledLink to='/sights'>Sightseeing</StyledLink></Nav.Link>
-          <Nav.Link className='p-5'><StyledLink to='/food'>Food & Drink</StyledLink></Nav.Link>
-          <Nav.Link className='p-5'><StyledLink to='/relax'>Relaxation</StyledLink></Nav.Link>
+          <div className='p-5'><StyledLink to='/attractions'>Attractions</StyledLink></div>
+          <div className='p-5'><StyledLink to='/sights'>Sightseeing</StyledLink></div>
+          <div className='p-5'><StyledLink to='/food'>Food & Drink</StyledLink></div>
+          <div className='p-5'><StyledLink to='/relax'>Relaxation</StyledLink></div>
         </Nav>
+        <Home />
         </Row>
       </Container>
 
