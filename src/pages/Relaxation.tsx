@@ -17,7 +17,7 @@ export default function Relaxation() {
             <Card.Body>
               <Card.Title>{item.title}</Card.Title>
               <Card.Text>{item.description}</Card.Text>
-              <Button variant='primary' onClick={() => handleShow(item.id)} key={item.id}>Learn More</Button>
+              <Button variant='info' onClick={() => handleShow(item.id)} key={item.id}>Learn More</Button>
             </Card.Body>
             <Modal
               show={learnMore === item.id}

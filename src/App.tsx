@@ -9,9 +9,14 @@ import Sightseeing from './pages/Sightseeing';
 import Home from './pages/Home';
 
 const StyledLink = styled(Link)`
+  color: black;
   text-decoration: none;
-  &:focus, &:hover, &:visited, &:link, &:active {
+  transition: all 0.2s ease-in-out;
+  &:focus, &:visited, &:link, &:active {
     text-decoration: none;
+  }
+  &:hover {
+    color: red;
   }
 `;
 
@@ -22,18 +27,18 @@ function App() {
         <Row>
           <Col><Header /></Col>
         </Row>
-        <Row className='m-3'>
-        <Nav justify variant='tabs'>
-          <div className='p-5'><StyledLink to='/attractions'>Attractions</StyledLink></div>
-          <div className='p-5'><StyledLink to='/sights'>Sightseeing</StyledLink></div>
-          <div className='p-5'><StyledLink to='/food'>Food & Drink</StyledLink></div>
-          <div className='p-5'><StyledLink to='/relax'>Relaxation</StyledLink></div>
+        <Row className='m-1'>
+        <Nav className='d-flex justify-content-around mb-2'>
+          <div className='py-5 px-3'><StyledLink to='/attractions'>Attractions</StyledLink></div>
+          <div className='pt-5'><StyledLink to='/sights'>Sightseeing</StyledLink></div>
+          <div className='pt-5'><StyledLink to='/food'>Food & Drink</StyledLink></div>
+          <div className='pt-5'><StyledLink to='/relax'>Relaxation</StyledLink></div>
         </Nav>
-        <Home />
         </Row>
       </Container>
 
       <Routes>
+        <Route path='*' element={<Home />} />
         <Route path='/attractions' element={<Attractions />} />
         <Route path='/sights' element={<Sightseeing />} />
         <Route path='/food' element={<FoodDrink />} />

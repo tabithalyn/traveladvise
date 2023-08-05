@@ -2,8 +2,8 @@ import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 
 export default function Header() {
   return (
-    <Navbar bg='dark' expand='xl'>
-      <Container>
+    <Navbar bg='light' expand='xl'>
+      <Container fluid>
         <Navbar.Brand href='/'>Explore London</Navbar.Brand>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
